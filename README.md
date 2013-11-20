@@ -1,9 +1,18 @@
-# Ruler
+# Chrome Ruler
 
 There are several rulers in the Chrome store, but most of the don't work well or they contain adware.
 
+## Installation
+
+This project will eventually be added to the Chrome Marketplace, but until then you can install it using the steps below.
+
+1. Clone this project.
+2. Visit [chrome://extensions](chrome://extensions) in your browser.
+3. Ensure that the **Developer mode** checkbox in the top right-hand corner is checked.
+4. Click **Load unpacked extension…** to pop up a file-selection dialog.
+5. Select the `src` directory from the cloned project.
+
 # TODO
-- Add install from source instructions
 - Add an icon
 - Improve styling
 - Move styling from JS to CSS
