@@ -2,7 +2,7 @@
 
 chrome.browserAction.onClicked.addListener(function() {
   chrome.tabs.executeScript({
-    file: 'bower_components/jquery/jquery.js'
+    file: 'bower_components/zepto/zepto.js'
   });
 
   chrome.tabs.executeScript({

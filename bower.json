@@ -2,7 +2,8 @@
   "name": "ruler",
   "version": "0.0.1",
   "dependencies": {
-    "jquery": "~2.0.3"
+    "jquery": "~2.0.3",
+    "zepto": "~1.0.0"
   },
   "devDependencies": {}
 }
