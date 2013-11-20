@@ -31,6 +31,14 @@ var Rect = function() {
   this.$rect.attr('class', 'ruler-rect');
 
   this.$rect.css('background-color', 'green');
+
+  this.$label = $('<div>');
+  this.$rect.prepend(this.$label);
+};
+
+Rect.prototype.showDimensions = function(origin, width, height) {
+  this.$label.position({top: 0, left: 0});
+  this.$label.text('W:' + width + ', H:' + height);
 };
 
 Rect.prototype.setDimensions = function(point) {
@@ -48,6 +56,8 @@ Rect.prototype.setDimensions = function(point) {
 
   this.$rect.width(width);
   this.$rect.height(height);
+
+  this.showDimensions(origin, width, height);
 };
 
 Rect.prototype.setOrigin = function(event) {
