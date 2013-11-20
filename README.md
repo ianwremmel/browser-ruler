@@ -1,6 +1,6 @@
 # Chrome Ruler
 
-There are several rulers in the Chrome store, but most of the don't work well or they contain adware.
+At the time I wrote this extension, there were 4 other ruler extensions in the Chrome Web Store. [MeasureIt]() and [ruul]() are adware-supported (though at least ruul admits to it). Why anyone would put adware in an extension this simple is beyond me. [Measure Ruler]() made an interesting choice for its example image. [Page Ruler]() looks nice, but it has a lot of bells and whistles that (a) I don't really need and (b) might slow startup time (given how slowly it took MeasureIt to load back when I used it before they added the adware, I'm surprised how quickly this extension loads).
 
 ## Installation
 
