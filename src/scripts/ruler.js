@@ -58,14 +58,14 @@ Rect.prototype.setOrigin = function(event) {
 
   this.origin = point;
 
+  if (this.$rect.parents().length === 0) {
+    $overlay.append(this.$rect);
+  }
+
   this.$rect.offset(point);
 
   this.$rect.width(0);
   this.$rect.height(0);
-
-  if (this.$rect.parents().length === 0) {
-    $overlay.append(this.$rect);
-  }
 
   $overlay.on('mousemove', $.proxy(this.followMouse, this));
   $overlay.one('click', $.proxy(this.stopFollowingMouse, this));
