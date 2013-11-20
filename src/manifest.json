@@ -1,0 +1,19 @@
+{
+  "name": "__MSG_appName__",
+  "description": "__MSG_appDescription__",
+  "version": "0.0.1",
+  "default_locale": "en",
+  "permissions": [
+    "activeTab"
+  ],
+  "background": {
+    "scripts": [
+      "scripts/background.js"
+    ],
+    "persisten": false
+  },
+  "browser_action": {
+    "default_title": "ruler"
+  },
+  "manifest_version": 2
+}
