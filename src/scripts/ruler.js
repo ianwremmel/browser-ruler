@@ -24,7 +24,6 @@ $overlay.css('opacity', '0.8');
 
 $('body').append($overlay);
 
-
 var Rect = function() {
   this.$rect = $('<div>');
 
@@ -44,8 +43,7 @@ Rect.prototype.setDimensions = function(point) {
   };
 
   if (origin.left !== this.origin.left || origin.top !== this.origin.top) {
-    this.origin = origin;
-    this.$rect.offset(this.origin);
+    this.$rect.offset(origin);
   }
 
   this.$rect.width(width);
