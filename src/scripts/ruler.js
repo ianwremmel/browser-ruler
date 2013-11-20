@@ -25,20 +25,33 @@ $overlay.css('opacity', '0.8');
 $('body').append($overlay);
 
 var Rect = function() {
-  this.$rect = $('<div>');
+  this.$rect = $('#ruler-rect');
+  if (this.$rect.length === 0) {
+    this.$rect = $('<div>');
+  }
+  this.$rect
+    .attr('id', 'ruler-rect')
+    .attr('class', 'ruler-rect')
+    .css('background-color', 'green')
+    .css('z-index', 10002)
+    .css('position', 'absolute');
 
-  this.$rect.attr('id', 'ruler-rect');
-  this.$rect.attr('class', 'ruler-rect');
-
-  this.$rect.css('background-color', 'green');
-
-  this.$label = $('<div>');
-  this.$rect.prepend(this.$label);
+  this.$label = $('#ruler-label');
+  if (this.$label.length === 0) {
+    this.$label = $('<span>');
+  }
+  this.$label
+    .attr('id', 'ruler-label')
+    .attr('class', 'ruler-label')
+    .css('background-color', 'green')
+    .css('whitespace', 'no-wrap')
+    .css('z-index', 10002)
+    .css('position', 'absolute');
 };
 
 Rect.prototype.showDimensions = function(origin, width, height) {
-  this.$label.position({top: 0, left: 0});
   this.$label.text('W:' + width + ', H:' + height);
+  this.$label.offset(origin);
 };
 
 Rect.prototype.setDimensions = function(point) {
@@ -70,9 +83,11 @@ Rect.prototype.setOrigin = function(event) {
 
   if (this.$rect.parents().length === 0) {
     $overlay.append(this.$rect);
+    $overlay.append(this.$label);
   }
 
   this.$rect.offset(point);
+  this.showDimensions(point, 0, 0);
 
   this.$rect.width(0);
   this.$rect.height(0);
