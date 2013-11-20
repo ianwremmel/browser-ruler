@@ -8,20 +8,6 @@ if ($overlay.length === 0) {
   $overlay.attr('id', 'ruler-overlay');
   $overlay.attr('class', 'ruler-overlay');
 
-
-  // TODO figure out why insertCSS wasn't working.
-  $overlay.css('position', 'fixed');
-  $overlay.css('top', 0);
-  $overlay.css('right', 0);
-  $overlay.css('bottom', 0);
-  $overlay.css('left', 0);
-
-  // Let's just make sure we're above everything else.
-  $overlay.css('z-index', 10000);
-
-  $overlay.css('background-color', '#000');
-  $overlay.css('opacity', '0.8');
-
   $('body').append($overlay);
 
   var Rect = function() {
@@ -31,10 +17,7 @@ if ($overlay.length === 0) {
     }
     this.$rect
       .attr('id', 'ruler-rect')
-      .attr('class', 'ruler-rect')
-      .css('background-color', 'green')
-      .css('z-index', 10002)
-      .css('position', 'absolute');
+      .attr('class', 'ruler-rect');
 
     this.$label = $('#ruler-label');
     if (this.$label.length === 0) {
@@ -42,11 +25,7 @@ if ($overlay.length === 0) {
     }
     this.$label
       .attr('id', 'ruler-label')
-      .attr('class', 'ruler-label')
-      .css('background-color', 'green')
-      .css('whitespace', 'no-wrap')
-      .css('z-index', 10002)
-      .css('position', 'absolute');
+      .attr('class', 'ruler-label');
   };
 
   Rect.prototype.showDimensions = function(origin, width, height) {

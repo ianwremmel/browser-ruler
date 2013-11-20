@@ -18,8 +18,6 @@ Icons built by [The Working Group](http://blog.twg.ca) and discovered at [Icon F
 
 ## TODO
 
-- Improve styling
-- Move styling from JS to CSS
 - Prefix classes, ids to prevent collisions with user styles
 - Create build process
 - Organize code across files

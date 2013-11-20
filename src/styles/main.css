@@ -1,3 +1,29 @@
-body {
-  background-color: red;
+.ruler-overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 10000;
+
+  background-color: rgba(0, 0, 0, 0.2);
+
+  cursor: crosshair;
+}
+
+.ruler-rect,
+.ruler-label {
+  position: absolute;
+  z-index: 10005;
+}
+
+.ruler-rect {
+  box-sizing: border-box;
+  background-color: rgba(127, 127, 127, 0.5);
+  border: 1px solid #000;
+}
+
+.ruler-label {
+  white-space: nowrap;
+  color: #000;
 }
