@@ -3,7 +3,6 @@
 There are several rulers in the Chrome store, but most of the don't work well or they contain adware.
 
 # TODO
-- Ensure the button actually acts as a toggle button.
 - Add install from source instructions
 - Add an icon
 - Improve styling
