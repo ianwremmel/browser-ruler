@@ -12,8 +12,12 @@ This project will eventually be added to the Chrome Marketplace, but until then 
 4. Click **Load unpacked extension…** to pop up a file-selection dialog.
 5. Select the `src` directory from the cloned project.
 
-# TODO
-- Add an icon
+## Attribution
+
+Icons built by [The Working Group](http://blog.twg.ca) and discovered at [Icon Finder](https://www.iconfinder.com/icons/62246/ruler_icon).
+
+## TODO
+
 - Improve styling
 - Move styling from JS to CSS
 - Prefix classes, ids to prevent collisions with user styles
