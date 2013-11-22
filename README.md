@@ -18,13 +18,14 @@ Icons built by [The Working Group](http://blog.twg.ca) and discovered at [Icon F
 
 ## TODO
 
-- Prefix classes, ids to prevent collisions with user styles
-- Create build process
-  - Image Min
-  - Image Resize
-  - Packaging
-- Organize code across files
-  - Use harmony modules?
-  - Create watcher task that will rebuild on change
-- Add to Chrome Marketplace
-- Add click-and-drag on long-click
+- [ ] Prefix classes, ids to prevent collisions with user styles
+- [ ] Create build process
+  - [ ] Image Min
+  - [X] Image Resize
+  - [ ] Concat/Uglify
+  - [ ] Packaging
+- [ ] Organize code across files
+  - [ ] Use harmony modules?
+  - [ ] Create watcher task that will rebuild on change
+- [ ] Add to Chrome Marketplace
+- [ ] Add click-and-drag on long-click

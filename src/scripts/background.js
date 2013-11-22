@@ -6,7 +6,7 @@ chrome.browserAction.onClicked.addListener(function() {
   });
 
   chrome.tabs.executeScript({
-    file: 'bower_components/zepto/zepto.js'
+    file: 'scripts/zepto.js'
   });
 
   chrome.tabs.executeScript({
