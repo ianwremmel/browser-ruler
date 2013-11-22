@@ -10,7 +10,7 @@ This project will eventually be added to the Chrome Marketplace, but until then 
 2. Visit [chrome://extensions](chrome://extensions) in your browser.
 3. Ensure that the **Developer mode** checkbox in the top right-hand corner is checked.
 4. Click **Load unpacked extension…** to pop up a file-selection dialog.
-5. Select the `src` directory from the cloned project.
+5. Select the `dist` directory from the cloned project.
 
 ## Attribution
 
@@ -29,3 +29,7 @@ Icons built by [The Working Group](http://blog.twg.ca) and discovered at [Icon F
   - [ ] Create watcher task that will rebuild on change
 - [ ] Add to Chrome Marketplace
 - [ ] Add click-and-drag on long-click
+
+## Bugs
+
+- [ ] Ruler is drawn relative to document and therefore does not draw properly when not scrolled to the top of the page.
