@@ -1,6 +1,7 @@
 'use strict';
 
 var $overlay = $('#ruler-overlay');
+
 // If the overlay doesn't exist, create it.
 if ($overlay.length === 0) {
   $overlay = $('<div>');
@@ -53,9 +54,11 @@ if ($overlay.length === 0) {
   };
 
   Rect.prototype.setOrigin = function(event) {
+    console.log(event);
+
     var point = {
-      left: event.clientX,
-      top: event.clientY
+      left: event.pageX,
+      top: event.pageY
     };
 
     this.origin = point;
@@ -77,8 +80,8 @@ if ($overlay.length === 0) {
 
   Rect.prototype.followMouse = function(event) {
     var point = {
-      left: event.clientX,
-      top: event.clientY
+      left: event.pageX,
+      top: event.pageY
     };
 
     this.setDimensions(point);
@@ -88,8 +91,8 @@ if ($overlay.length === 0) {
     $overlay.off('mousemove', this.followMouse);
 
     var point = {
-      left: event.clientX,
-      top: event.clientY
+      left: event.pageX,
+      top: event.pageY
     };
 
     this.setDimensions(point);
