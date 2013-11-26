@@ -18,10 +18,4 @@ Icons built by [The Working Group](http://blog.twg.ca) and discovered at [Icon F
 
 ## TODO
 
-- [ ] Create build process
-  - [ ] Image Min
-  - [X] Image Resize
-  - [ ] Concat/Uglify
-  - [ ] Packaging
-- [ ] Add to Chrome Marketplace
 - [ ] Add click-and-drag on long-click

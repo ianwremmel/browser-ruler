@@ -2,11 +2,16 @@ module.exports = (grunt) ->
 
   require('load-grunt-tasks')(grunt)
 
-  grunt.registerTask 'default', [
+  grunt.registerTask 'build', [
     'clean'
     'jshint'
     'copy'
     'image_resize'
+  ]
+
+  grunt.registerTask 'default', [
+    'build'
+    'compress'
   ]
 
   grunt.initConfig
@@ -62,11 +67,21 @@ module.exports = (grunt) ->
         files:
           'dist/images/icon-38.png': 'src/images/icon-64.png'
 
+    compress:
+      dist:
+        options:
+          archive: 'ruler.zip'
+        files: [
+          expand: true
+          cwd: 'dist'
+          src: '**/*'
+        ]
+
     watch:
       src:
         files: [
           'src/**/*'
         ]
         tasks: [
-          'default'
+          'build'
         ]

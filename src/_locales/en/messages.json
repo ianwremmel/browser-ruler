@@ -4,7 +4,7 @@
     "description": "The name of the application"
   },
   "appDescription": {
-    "message": "A ruler for Chrome",
+    "message": "Simple tool for measuring arbitrary parts of a page. Does not and will never contain adware.",
     "description": "The description of the application"
   }
 }
