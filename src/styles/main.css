@@ -1,4 +1,5 @@
-.ruler-overlay {
+/* 7299d2d29ee0de87bd5e67ed9e6d7a0d is the md5() of 'ruler' for avoid collisions with already existing styles. */
+.ruler-overlay-7299d2d29ee0de87bd5e67ed9e6d7a0d {
   position: fixed;
   top: 0;
   right: 0;
@@ -11,19 +12,19 @@
   cursor: crosshair;
 }
 
-.ruler-rect,
-.ruler-label {
+.ruler-rect-7299d2d29ee0de87bd5e67ed9e6d7a0d,
+.ruler-label-7299d2d29ee0de87bd5e67ed9e6d7a0d {
   position: absolute;
   z-index: 10005;
 }
 
-.ruler-rect {
+.ruler-rect-7299d2d29ee0de87bd5e67ed9e6d7a0d {
   box-sizing: border-box;
   background-color: rgba(127, 127, 127, 0.5);
   border: 1px solid #000;
 }
 
-.ruler-label {
+.ruler-label-7299d2d29ee0de87bd5e67ed9e6d7a0d {
   white-space: nowrap;
   color: #000;
 }

@@ -1,32 +1,32 @@
 'use strict';
 
-var $overlay = $('#ruler-overlay');
+var $overlay = $('#ruler-overlay-7299d2d29ee0de87bd5e67ed9e6d7a0d');
 
 // If the overlay doesn't exist, create it.
 if ($overlay.length === 0) {
   $overlay = $('<div>');
 
-  $overlay.attr('id', 'ruler-overlay');
-  $overlay.attr('class', 'ruler-overlay');
+  $overlay.attr('id', 'ruler-overlay-7299d2d29ee0de87bd5e67ed9e6d7a0d');
+  $overlay.attr('class', 'ruler-overlay-7299d2d29ee0de87bd5e67ed9e6d7a0d');
 
   $('body').append($overlay);
 
   var Rect = function() {
-    this.$rect = $('#ruler-rect');
+    this.$rect = $('#ruler-rect-7299d2d29ee0de87bd5e67ed9e6d7a0d');
     if (this.$rect.length === 0) {
       this.$rect = $('<div>');
     }
     this.$rect
-      .attr('id', 'ruler-rect')
-      .attr('class', 'ruler-rect');
+      .attr('id', 'ruler-rect-7299d2d29ee0de87bd5e67ed9e6d7a0d')
+      .attr('class', 'ruler-rect-7299d2d29ee0de87bd5e67ed9e6d7a0d');
 
-    this.$label = $('#ruler-label');
+    this.$label = $('#ruler-label-7299d2d29ee0de87bd5e67ed9e6d7a0d');
     if (this.$label.length === 0) {
       this.$label = $('<span>');
     }
     this.$label
-      .attr('id', 'ruler-label')
-      .attr('class', 'ruler-label');
+      .attr('id', 'ruler-label-7299d2d29ee0de87bd5e67ed9e6d7a0d')
+      .attr('class', 'ruler-label-7299d2d29ee0de87bd5e67ed9e6d7a0d');
   };
 
   Rect.prototype.showDimensions = function(origin, width, height) {

@@ -18,7 +18,6 @@ Icons built by [The Working Group](http://blog.twg.ca) and discovered at [Icon F
 
 ## TODO
 
-- [ ] Prefix classes, ids to prevent collisions with user styles
 - [ ] Create build process
   - [ ] Image Min
   - [X] Image Resize
