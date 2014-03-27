@@ -19,3 +19,7 @@ Icons built by [The Working Group](http://blog.twg.ca) and discovered at [Icon F
 ## TODO
 
 - [ ] Add click-and-drag on long-click
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/ianwremmel/chrome-ruler/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
