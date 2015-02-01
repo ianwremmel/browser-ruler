@@ -3,7 +3,7 @@
 var Point = function(x, y) {
   if (typeof x === 'object') {
     y = x.y;
-    x = x.x
+    x = x.x;
   }
 
   Object.defineProperties(this, {
@@ -18,11 +18,11 @@ var Point = function(x, y) {
     },
     y: {
       get: function() {
-        return y
+        return y;
       },
       set: function(value) {
         console.debug('set() y', value);
-        y = value
+        y = value;
       }
     }
   });

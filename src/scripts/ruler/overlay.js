@@ -7,7 +7,7 @@ var Ruler = require('./ruler');
 
 var Overlay = function() {
   this.onMousedown = this.onMousedown.bind(this);
-  this.onMousemove = this.onMousemove.bind(this)
+  this.onMousemove = this.onMousemove.bind(this);
   this.onMouseup = this.onMouseup.bind(this);
 
   this.el = document.getElementById(pc('ruler-overlay'));
@@ -63,7 +63,9 @@ assign(Overlay.prototype, {
 
   remove: function() {
     if (this.el) {
+      this.el.removeEventListener('mousedown', this.onMousedown);
       this.el.removeEventListener('mousemove', this.onMousemove);
+      this.el.removeEventListener('mouseup', this.onMouseup);
       document.body.removeChild(this.el);
     }
   }

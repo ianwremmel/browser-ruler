@@ -10,6 +10,7 @@
   "rules": {
     "global-strict": [2, "always"],
     "no-comma-dangle": [0],
+    "no-underscore-dangle": [0],
     "quotes": [2, "single", "avoid-escape"],
     "strict": [2, "global"]
   }
