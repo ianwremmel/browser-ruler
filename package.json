@@ -1,6 +1,6 @@
 {
   "name": "ruler",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "author": {
     "name": "Ian Remmel",
     "url": "http://ianwremmel.com/"
@@ -28,9 +28,13 @@
     "grunt-eslint": "~5.1.0",
     "grunt-image-resize": "~0.3.0",
     "load-grunt-tasks": "^3.1.0",
-    "time-grunt": "~1.0.0"
+    "time-grunt": "~1.0.0",
+    "uglifyify": "^3.0.1"
   },
   "engines": {
     "node": ">=0.8.0"
+  },
+  "dependencies": {
+    "object-assign": "^2.0.0"
   }
 }

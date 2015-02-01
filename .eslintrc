@@ -1,6 +1,7 @@
 {
   "env": {
-    "browser": true
+    "browser": true,
+    "node": true
   },
   "globals": {
     "$": false,
@@ -8,7 +9,8 @@
   },
   "rules": {
     "global-strict": [2, "always"],
-    "strict": [2, "global"],
-    "quotes": [2, "single", "avoid-escape"]
+    "no-comma-dangle": [0],
+    "quotes": [2, "single", "avoid-escape"],
+    "strict": [2, "global"]
   }
 }

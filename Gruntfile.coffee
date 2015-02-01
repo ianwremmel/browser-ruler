@@ -4,11 +4,14 @@ module.exports = (grunt) ->
 
   grunt.initConfig
     browserify:
-      dist: {
-        files: {
-          'dist/scripts/bundle.js': 'src/scripts/ruler.js'
-        }
-      }
+      dev:
+        files:
+          'dist/scripts/bundle.js': 'src/scripts/ruler/index.js'
+      dist:
+        files:
+          'dist/scripts/bundle.js': 'src/scripts/ruler/index.js'
+        options:
+          transform: ['uglifyify']
 
     clean:
       dist: [
@@ -69,23 +72,30 @@ module.exports = (grunt) ->
           'dist/images/icon-38.png': 'src/images/icon-64.png'
 
     watch:
-      src:
+      options:
+        atBegin: true
+      scripts:
+        files: ['src/scripts/**/*.js']
+        tasks: ['browserify:dev']
+      all:
         files: [
           'src/**/*'
+          '!src/**/*.js'
         ]
-        tasks: [
-          'build'
-        ]
+        tasks: ['copy']
 
   grunt.registerTask 'build', [
-    'clean'
-    'eslint'
     'copy'
-    'browserify'
+    'browserify:dist'
     'image_resize'
   ]
 
-  grunt.registerTask 'default', [
+  grunt.registerTask 'release', [
+    'eslint'
+    'clean'
+    # TODO 'bump'
     'build'
     'compress'
   ]
+
+  grunt.registerTask 'default', ['watch']
