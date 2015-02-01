@@ -1,10 +1,12 @@
 # Chrome Ruler
 
-At the time I wrote this extension, there were 4 other ruler extensions in the Chrome Web Store. [MeasureIt]() and [ruul]() are adware-supported (though at least ruul admits to it). Why anyone would put adware in an extension this simple is beyond me. [Measure Ruler]() made an interesting choice for its example image. [Page Ruler]() looks nice, but it has a lot of bells and whistles that (a) I don't really need and (b) might slow startup time (given how slowly it took MeasureIt to load back when I used it before they added the adware, I'm surprised how quickly this extension loads).
+At the time I wrote this extension, there were 4 other ruler extensions in the Chrome Web Store. Two are adware supported (one without admitting it) and the other has too many features I didn't need.
 
 ## Installation
 
-This project will eventually be added to the Chrome Marketplace, but until then you can install it using the steps below.
+The easiest way to install this extension is via the [Chrome Web Store](https://chrome.google.com/webstore/category/extensions?hl=en-US).
+
+Follow the steps below to install from source.
 
 1. Clone this project.
 2. Visit [chrome://extensions](chrome://extensions) in your browser.
@@ -16,10 +18,4 @@ This project will eventually be added to the Chrome Marketplace, but until then 
 
 Icons built by [The Working Group](http://blog.twg.ca) and discovered at [Icon Finder](https://www.iconfinder.com/icons/62246/ruler_icon).
 
-## TODO
-
-- [ ] Add click-and-drag on long-click
-
-
 [![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/ianwremmel/chrome-ruler/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
-
