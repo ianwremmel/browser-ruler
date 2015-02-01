@@ -18,4 +18,10 @@ Follow the steps below to install from source.
 
 Icons built by [The Working Group](http://blog.twg.ca) and discovered at [Icon Finder](https://www.iconfinder.com/icons/62246/ruler_icon).
 
+## Changelog
+
+0.2.0 - 2015-01-31 - Maintenance release
+  - Remove bower, zepto
+  - Modularize code
+
 [![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/ianwremmel/chrome-ruler/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
