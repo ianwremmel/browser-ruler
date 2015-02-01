@@ -3,6 +3,13 @@ module.exports = (grunt) ->
   require('load-grunt-tasks')(grunt)
 
   grunt.initConfig
+    browserify:
+      dist: {
+        files: {
+          'dist/scripts/bundle.js': 'src/scripts/ruler.js'
+        }
+      }
+
     clean:
       dist: [
         'dist/**/*'
@@ -26,7 +33,7 @@ module.exports = (grunt) ->
           '_locales/**/*'
           'images/icon-48.png'
           'manifest.json'
-          'scripts/**/*.js'
+          'scripts/background.js'
           'styles/**/*.css'
         ]
         dest: 'dist'
@@ -74,6 +81,7 @@ module.exports = (grunt) ->
     'clean'
     'eslint'
     'copy'
+    'browserify'
     'image_resize'
   ]
 

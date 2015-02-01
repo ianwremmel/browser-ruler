@@ -6,10 +6,6 @@ chrome.browserAction.onClicked.addListener(function() {
   });
 
   chrome.tabs.executeScript({
-    file: 'scripts/zepto.js'
-  });
-
-  chrome.tabs.executeScript({
-    file: 'scripts/ruler.js'
+    file: 'scripts/bundle.js'
   });
 });
