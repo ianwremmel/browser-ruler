@@ -1,18 +1,6 @@
 module.exports = (grunt) ->
-
+  require('time-grunt')(grunt)
   require('load-grunt-tasks')(grunt)
-
-  grunt.registerTask 'build', [
-    'clean'
-    'jshint'
-    'copy'
-    'image_resize'
-  ]
-
-  grunt.registerTask 'default', [
-    'build'
-    'compress'
-  ]
 
   grunt.initConfig
     clean:
@@ -20,12 +8,15 @@ module.exports = (grunt) ->
         'dist/**/*'
       ]
 
-    jshint:
-      options:
-        jshintrc: '.jshintrc'
-      src: [
-        'src/scripts/**/*.js'
-      ]
+    compress:
+      dist:
+        options:
+          archive: 'ruler.zip'
+        files: [
+          expand: true
+          cwd: 'dist'
+          src: '**/*'
+        ]
 
     copy:
       dist:
@@ -43,6 +34,9 @@ module.exports = (grunt) ->
       vendor:
         files:
           'dist/scripts/zepto.js': 'bower_components/zepto/zepto.js'
+
+    eslint:
+      target: ['src/**/*.js']
 
     # TODO 128px image
     image_resize:
@@ -67,16 +61,6 @@ module.exports = (grunt) ->
         files:
           'dist/images/icon-38.png': 'src/images/icon-64.png'
 
-    compress:
-      dist:
-        options:
-          archive: 'ruler.zip'
-        files: [
-          expand: true
-          cwd: 'dist'
-          src: '**/*'
-        ]
-
     watch:
       src:
         files: [
@@ -85,3 +69,15 @@ module.exports = (grunt) ->
         tasks: [
           'build'
         ]
+
+  grunt.registerTask 'build', [
+    'clean'
+    'eslint'
+    'copy'
+    'image_resize'
+  ]
+
+  grunt.registerTask 'default', [
+    'build'
+    'compress'
+  ]

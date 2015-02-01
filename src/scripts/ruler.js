@@ -54,8 +54,6 @@ if ($overlay.length === 0) {
   };
 
   Rect.prototype.setOrigin = function(event) {
-    console.log(event);
-
     var point = {
       left: event.pageX,
       top: event.pageY
