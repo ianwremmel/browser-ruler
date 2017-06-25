@@ -1,5 +1,7 @@
 # Chrome Ruler
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/ianwremmel/chrome-ruler.svg)](https://greenkeeper.io/)
+
 At the time I wrote this extension, there were 4 other ruler extensions in the Chrome Web Store. Two are adware supported (one without admitting it) and the other has too many features I didn't need.
 
 ## Installation
