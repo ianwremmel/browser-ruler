@@ -25,3 +25,8 @@ Icons built by [The Working Group](http://blog.twg.ca) and discovered at [Icon F
   - Modularize code
 
 [![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/ianwremmel/chrome-ruler/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bhttps%3A%2F%2Fgithub.com%2Fianwremmel%2Fchrome-ruler.svg?type=shield)](https://app.fossa.io/projects/git%2Bhttps%3A%2F%2Fgithub.com%2Fianwremmel%2Fchrome-ruler?ref=badge_shield)
+
+
+## License
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bhttps%3A%2F%2Fgithub.com%2Fianwremmel%2Fchrome-ruler.svg?type=large)](https://app.fossa.io/projects/git%2Bhttps%3A%2F%2Fgithub.com%2Fianwremmel%2Fchrome-ruler?ref=badge_large)
