@@ -1,8 +1,8 @@
 'use strict';
 
-var Overlay = require('./overlay');
+const Overlay = require(`./overlay`);
 
-var overlay = new Overlay();
+const overlay = new Overlay();
 if (overlay.isVisible()) {
   overlay.remove();
 }

@@ -1,0 +1,10 @@
+env:
+  browser: true
+  node: true
+extends: "@ianwremmel"
+globals:
+  $: false
+  chrome: false
+rules:
+  no-console:
+    - off

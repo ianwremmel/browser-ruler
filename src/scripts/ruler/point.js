@@ -1,34 +1,37 @@
 'use strict';
 
-var Point = function(x, y) {
-  if (typeof x === 'object') {
-    y = x.y;
-    x = x.x;
+function Point(x, y) {
+  let _x = x;
+  let _y = y;
+
+  if (typeof x === `object`) {
+    _y = x.y;
+    _x = x.x;
   }
 
   Object.defineProperties(this, {
     x: {
-      get: function() {
-        return x;
+      get() {
+        return _x;
       },
-      set: function(value) {
-        console.debug('set() x', value);
-        x = value;
+      set(value) {
+        console.debug(`set() x`, value);
+        _x = value;
       }
     },
     y: {
-      get: function() {
-        return y;
+      get() {
+        return _y;
       },
-      set: function(value) {
-        console.debug('set() y', value);
-        y = value;
+      set(value) {
+        console.debug(`set() y`, value);
+        _y = value;
       }
     }
   });
-};
+}
 
-Point.prototype.equals = function(point) {
+Point.prototype.equals = function equals(point) {
   return point && this.x === point.x && this.y === point.y;
 };
 

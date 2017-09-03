@@ -1,19 +1,19 @@
 'use strict';
 
-var assign = require('object-assign');
-var pc = require('../lib/prevent-collision');
-var Rect = require('./rect');
+const assign = require(`object-assign`);
+const pc = require(`../lib/prevent-collision`);
+const Rect = require(`./rect`);
 
-var Ruler = function(overlay) {
-  this.el = document.getElementById(pc('ruler-rect'));
+function Ruler(overlay) {
+  this.el = document.getElementById(pc(`ruler-rect`));
   if (!this.el) {
-    this.el = document.createElement('div');
-    this.el.id = pc('ruler-rect');
-    this.el.classList.add(pc('ruler-rect'));
+    this.el = document.createElement(`div`);
+    this.el.id = pc(`ruler-rect`);
+    this.el.classList.add(pc(`ruler-rect`));
 
-    this.label = document.createElement('span');
-    this.label.id = pc('ruler-label');
-    this.label.classList.add(pc('ruler-label'));
+    this.label = document.createElement(`span`);
+    this.label.id = pc(`ruler-label`);
+    this.label.classList.add(pc(`ruler-label`));
 
     this.el.appendChild(this.label);
 
@@ -21,10 +21,10 @@ var Ruler = function(overlay) {
   }
 
   this.rect = new Rect();
-};
+}
 
 assign(Ruler.prototype, {
-  draw: function(origin, terminus) {
+  draw(origin, terminus) {
     if (origin) {
       this.terminus.origin = origin;
     }
@@ -37,27 +37,27 @@ assign(Ruler.prototype, {
       this.rect.terminus = this.rect.origin;
     }
 
-    console.debug('draw', this.rect.origin, this.rect.terminus);
+    console.debug(`draw`, this.rect.origin, this.rect.terminus);
 
-    this.el.style.top = this.rect.top + 'px';
-    this.el.style.right = this.rect.right + 'px';
-    this.el.style.bottom = this.rect.bottom + 'px';
-    this.el.style.left = this.rect.left + 'px';
+    this.el.style.top = `${this.rect.top}px`;
+    this.el.style.right = `${this.rect.right}px`;
+    this.el.style.bottom = `${this.rect.bottom}px`;
+    this.el.style.left = `${this.rect.left}px`;
 
-    this.el.style.width = this.rect.width + 'px';
-    this.el.style.height = this.rect.height + 'px';
+    this.el.style.width = `${this.rect.width}px`;
+    this.el.style.height = `${this.rect.height}px`;
 
-    this.label.innerHTML = 'W:' + this.rect.width + ', H:' + this.rect.height;
+    this.label.innerHTML = `W:${this.rect.width}, H:${this.rect.height}`;
 
     console.debug(this.rect.top, this.rect.right, this.rect.bottom, this.rect.left);
   },
 
-  isDrawing: function() {
+  isDrawing() {
     return this._isDrawing;
   },
 
-  setOrigin: function(point) {
-    console.debug('setOrigin', point);
+  setOrigin(point) {
+    console.debug(`setOrigin`, point);
 
     this._isDrawing = true;
 
@@ -65,8 +65,8 @@ assign(Ruler.prototype, {
     this.draw();
   },
 
-  setTerminus: function(point) {
-    console.debug('setTerminus', point);
+  setTerminus(point) {
+    console.debug(`setTerminus`, point);
 
     this.rect.terminus = point;
     this.draw();

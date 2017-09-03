@@ -45,9 +45,6 @@ module.exports = (grunt) ->
         files:
           'dist/scripts/zepto.js': 'bower_components/zepto/zepto.js'
 
-    eslint:
-      target: ['src/**/*.js']
-
     # TODO 128px image
     image_resize:
       options:
@@ -91,7 +88,6 @@ module.exports = (grunt) ->
   ]
 
   grunt.registerTask 'release', [
-    'eslint'
     'clean'
     # TODO 'bump'
     'build'
