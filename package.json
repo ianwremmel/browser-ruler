@@ -25,7 +25,8 @@
     "lint:js": "npm run lint:eslint -- .",
     "lint:css": "stylelint ./src/**/*.css",
     "lint:staged": "lint-staged",
-    "lint": "npm run lint:js && npm run lint:js"
+    "lint": "npm run lint:js && npm run lint:js",
+    "test": "npm run lint && npm run build"
   },
   "dependencies": {},
   "devDependencies": {
