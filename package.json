@@ -18,15 +18,16 @@
     "precommit": "npm run lint:staged",
     "prebuild": "rimraf ./dist/*",
     "build": "webpack --config webpack.config.babel.js",
+    "postbuild": "npm run lint:dist",
     "build:prod": "cross-env NODE_ENV=production npm run build",
     "lint:eslint": "eslint --ignore-path .gitignore",
+    "lint:dist": "web-ext lint --source-dir dist",
     "lint:js": "npm run lint:eslint -- .",
     "lint:css": "stylelint ./src/**/*.css",
     "lint:staged": "lint-staged",
     "lint": "npm run lint:js && npm run lint:js"
   },
-  "dependencies": {
-  },
+  "dependencies": {},
   "devDependencies": {
     "@ianwremmel/eslint-config": "^2.2.0",
     "babel-core": "^6.26.0",
@@ -48,6 +49,7 @@
     "style-loader": "^0.18.2",
     "stylelint": "^8.0.0",
     "stylelint-config-standard": "^17.0.0",
+    "web-ext": "^2.0.0",
     "webpack": "^3.5.5"
   },
   "lint-staged": {
