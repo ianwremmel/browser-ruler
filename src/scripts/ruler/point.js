@@ -1,6 +1,4 @@
-'use strict';
-
-function Point(x, y) {
+export default function Point(x, y) {
   let _x = x;
   let _y = y;
 
@@ -34,5 +32,3 @@ function Point(x, y) {
 Point.prototype.equals = function equals(point) {
   return point && this.x === point.x && this.y === point.y;
 };
-
-module.exports = Point;

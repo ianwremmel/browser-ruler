@@ -1,6 +1,4 @@
-'use strict';
-
-const Overlay = require(`./overlay`);
+import Overlay from './overlay';
 
 const overlay = new Overlay();
 if (overlay.isVisible()) {

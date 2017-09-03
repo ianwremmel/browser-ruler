@@ -1,4 +1,4 @@
-'use strict';
+/* eslint-disable import/unambiguous */
 
 chrome.browserAction.onClicked.addListener(() => {
   chrome.tabs.insertCSS({file: `styles/main.css`});

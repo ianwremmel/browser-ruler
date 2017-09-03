@@ -17,7 +17,7 @@
   "scripts": {
     "precommit": "npm run --silent lint:staged",
     "prebuild": "rimraf ./dist/*",
-    "build": "webpack --config webpack.config.js",
+    "build": "webpack --config webpack.config.babel.js",
     "lint:eslint": "eslint --ignore-path .gitignore",
     "lint:js": "npm run --silent lint:eslint -- .",
     "lint:css": "stylelint ./src/**/*.css",
@@ -30,6 +30,8 @@
   "devDependencies": {
     "@ianwremmel/eslint-config": "^2.2.0",
     "babel-eslint": "^7.2.3",
+    "babel-preset-env": "^1.6.0",
+    "babel-register": "^6.26.0",
     "copy-webpack-plugin": "^4.0.1",
     "css-loader": "^0.28.7",
     "eslint": "^4.6.0",

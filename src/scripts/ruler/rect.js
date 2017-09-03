@@ -1,8 +1,6 @@
-'use strict';
+import Point from './point';
 
-const Point = require(`./point`);
-
-function Rect(o, t) {
+export default function Rect(o, t) {
   let origin = o || new Point();
   let terminus = t || new Point();
 
@@ -64,5 +62,3 @@ function Rect(o, t) {
     }
   });
 }
-
-module.exports = Rect;

@@ -1,10 +1,10 @@
-'use strict';
+import assign from 'object-assign';
 
-const assign = require(`object-assign`);
-const pc = require(`../lib/prevent-collision`);
-const Rect = require(`./rect`);
+import pc from '../lib/prevent-collision';
 
-function Ruler(overlay) {
+import Rect from './rect';
+
+export default function Ruler(overlay) {
   this.el = document.getElementById(pc(`ruler-rect`));
   if (!this.el) {
     this.el = document.createElement(`div`);
@@ -74,5 +74,3 @@ assign(Ruler.prototype, {
     this._isDrawing = false;
   }
 });
-
-module.exports = Ruler;

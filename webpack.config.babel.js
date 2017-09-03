@@ -1,12 +1,11 @@
-'use strict';
-
 /* eslint-disable sort-keys */
 
-const path = require(`path`);
-const ExtractTextPlugin = require(`extract-text-webpack-plugin`);
-const CopyWebpackPlugin = require(`copy-webpack-plugin`);
+import path from 'path';
 
-module.exports = {
+import CopyWebpackPlugin from 'copy-webpack-plugin';
+import ExtractTextPlugin from 'extract-text-webpack-plugin';
+
+const config = {
   entry: {bundle: `./src/index.js`},
   output: {
     filename: `scripts/[name].js`,
@@ -46,3 +45,5 @@ module.exports = {
     ])
   ]
 };
+
+export default config;

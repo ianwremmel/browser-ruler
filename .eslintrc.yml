@@ -1,7 +1,9 @@
 env:
   browser: true
   node: true
-extends: "@ianwremmel"
+extends:
+- "@ianwremmel"
+- "@ianwremmel/eslint-config/import"
 globals:
   $: false
   chrome: false

@@ -1,4 +1,4 @@
-'use strict';
+/* eslint-disable import/no-unassigned-import */
 
-require(`./styles/main.css`);
-require(`./scripts/ruler`);
+import './styles/main.css';
+import './scripts/ruler';

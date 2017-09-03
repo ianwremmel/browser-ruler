@@ -1,11 +1,11 @@
-'use strict';
+import assign from 'object-assign';
 
-const assign = require(`object-assign`);
-const pc = require(`../lib/prevent-collision`);
-const Point = require(`./point`);
-const Ruler = require(`./ruler`);
+import pc from '../lib/prevent-collision';
 
-function Overlay() {
+import Point from './point';
+import Ruler from './ruler';
+
+export default function Overlay() {
   this.onMousedown = this.onMousedown.bind(this);
   this.onMousemove = this.onMousemove.bind(this);
   this.onMouseup = this.onMouseup.bind(this);
@@ -70,5 +70,3 @@ assign(Overlay.prototype, {
     }
   }
 });
-
-module.exports = Overlay;
