@@ -15,24 +15,29 @@
     "url": "git://github.com/ianwremmel/chrome-ruler.git"
   },
   "scripts": {
-    "precommit": "npm run --silent lint:staged",
+    "precommit": "npm run lint:staged",
     "prebuild": "rimraf ./dist/*",
     "build": "webpack --config webpack.config.babel.js",
+    "build:prod": "cross-env NODE_ENV=production npm run build",
     "lint:eslint": "eslint --ignore-path .gitignore",
-    "lint:js": "npm run --silent lint:eslint -- .",
+    "lint:js": "npm run lint:eslint -- .",
     "lint:css": "stylelint ./src/**/*.css",
     "lint:staged": "lint-staged",
-    "lint": "npm run --silent lint:js && npm run --silent lint:js"
+    "lint": "npm run lint:js && npm run lint:js"
   },
   "dependencies": {
     "object-assign": "^4.1.0"
   },
   "devDependencies": {
     "@ianwremmel/eslint-config": "^2.2.0",
+    "babel-core": "^6.26.0",
     "babel-eslint": "^7.2.3",
+    "babel-loader": "^7.1.2",
     "babel-preset-env": "^1.6.0",
+    "babel-preset-minify": "^0.2.0",
     "babel-register": "^6.26.0",
     "copy-webpack-plugin": "^4.0.1",
+    "cross-env": "^5.0.5",
     "css-loader": "^0.28.7",
     "eslint": "^4.6.0",
     "eslint-plugin-import": "^2.7.0",
