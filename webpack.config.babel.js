@@ -36,7 +36,7 @@ const config = {
       },
       {
         context: `./src`,
-        from: `images/icon-48.png`
+        from: `images/**/*`
       },
       {
         context: `./src`,
