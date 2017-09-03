@@ -20,8 +20,9 @@
     "build": "webpack --config webpack.config.js",
     "lint:eslint": "eslint --ignore-path .gitignore",
     "lint:js": "npm run --silent lint:eslint -- .",
+    "lint:css": "stylelint ./src/**/*.css",
     "lint:staged": "lint-staged",
-    "lint": "npm run --silent lint:js"
+    "lint": "npm run --silent lint:js && npm run --silent lint:js"
   },
   "dependencies": {
     "object-assign": "^4.1.0"
@@ -36,6 +37,8 @@
     "husky": "^0.14.3",
     "lint-staged": "^4.0.4",
     "rimraf": "^2.6.1",
+    "stylelint": "^8.0.0",
+    "stylelint-config-standard": "^17.0.0",
     "webpack": "^3.5.5"
   },
   "lint-staged": {
