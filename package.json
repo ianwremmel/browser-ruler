@@ -26,7 +26,6 @@
     "lint": "npm run lint:js && npm run lint:js"
   },
   "dependencies": {
-    "object-assign": "^4.1.0"
   },
   "devDependencies": {
     "@ianwremmel/eslint-config": "^2.2.0",
