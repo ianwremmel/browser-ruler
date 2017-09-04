@@ -11,10 +11,11 @@ The easiest way to install this extension is via the [Chrome Web Store](https://
 Follow the steps below to install from source.
 
 1. Clone this project.
-2. Visit [chrome://extensions](chrome://extensions) in your browser.
-3. Ensure that the **Developer mode** checkbox in the top right-hand corner is checked.
-4. Click **Load unpacked extension…** to pop up a file-selection dialog.
-5. Select the `dist` directory from the cloned project.
+1. Visit [chrome://extensions](chrome://extensions) in your browser.
+1. Ensure that the **Developer mode** checkbox in the top right-hand corner is checked.
+1. Click **Load unpacked extension…** to pop up a file-selection dialog.
+1. Install dependencies and build the project: `npm install && npm run build`
+1. Select the `dist` directory from the cloned project.
 
 ## Attribution
 
@@ -23,6 +24,7 @@ Icons built by [The Working Group](http://blog.twg.ca) and discovered at [Icon F
 ## Changelog
 
 0.2.0 - 2015-01-31 - Maintenance release
+
   - Remove bower, zepto
   - Modularize code
 
