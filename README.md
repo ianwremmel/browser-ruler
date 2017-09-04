@@ -1,7 +1,7 @@
 # Browser Ruler
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/ianwremmel/chrome-ruler.svg)](https://greenkeeper.io/)
-[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bhttps%3A%2F%2Fgithub.com%2Fianwremmel%2Fchrome-ruler.svg?type=shield)](https://app.fossa.io/projects/git%2Bhttps%3A%2F%2Fgithub.com%2Fianwremmel%2Fchrome-ruler?ref=badge_shield)
+[![CircleCI](https://circleci.com/gh/ianwremmel/browser-ruler.svg?style=svg)](https://circleci.com/gh/ianwremmel/browser-ruler)[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bhttps%3A%2F%2Fgithub.com%2Fianwremmel%2Fbrowser-ruler.svg?type=shield)](https://app.fossa.io/projects/git%2Bhttps%3A%2F%2Fgithub.com%2Fianwremmel%2Fbrowser-ruler?ref=badge_shield)
+[![Greenkeeper badge](https://badges.greenkeeper.io/ianwremmel/browser-ruler.svg)](https://greenkeeper.io/)
 [![standard-readme compliant](https://img.shields.io/badge/readme%20style-standard-brightgreen.svg?style=flat-square)](https://github.com/RichardLitt/standard-readme)
 
 > Measure things in your browser!
@@ -54,4 +54,4 @@ I'd love to hear about bug fixes or other ways to improve this. PRs are very wel
 
 [MIT](LICENSE) &copy; Ian W. Remmel
 
-[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bhttps%3A%2F%2Fgithub.com%2Fianwremmel%2Fchrome-ruler.svg?type=large)](https://app.fossa.io/projects/git%2Bhttps%3A%2F%2Fgithub.com%2Fianwremmel%2Fchrome-ruler?ref=badge_large)
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bhttps%3A%2F%2Fgithub.com%2Fianwremmel%2Fbrowser-ruler.svg?type=large)](https://app.fossa.io/projects/git%2Bhttps%3A%2F%2Fgithub.com%2Fianwremmel%2Fbrowser-ruler?ref=badge_large)
