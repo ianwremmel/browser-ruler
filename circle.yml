@@ -1,3 +1,24 @@
-machine:
-  node:
-    version: 7
+version: 2
+jobs:
+  build:
+    working_directory: ~/browser-ruler
+    docker:
+      - image: node:7
+    steps:
+      - checkout
+      - restore_cache:
+          key: dependency-cache-{{ checksum "package.json" }}
+      - run:
+          command: npm install
+      - save_cache:
+          key: dependency-cache-{{ checksum "package.json" }}
+          paths:
+            - ./node_modules
+      - run:
+          command: npm test
+      - run:
+          command: NODE_ENV=production npm run build
+      - run:
+          command: NODE_ENV=production npm run archive
+      - store_artifacts:
+          path: ./artifacts
