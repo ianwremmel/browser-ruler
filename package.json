@@ -3,7 +3,7 @@
   "version": "0.2.0",
   "description": "",
   "bugs": {
-    "url": "http://github.com/ianwremmel/chrome-ruler/issues"
+    "url": "http://github.com/ianwremmel/browser-ruler/issues"
   },
   "license": "MIT",
   "author": {
@@ -12,7 +12,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/ianwremmel/chrome-ruler.git"
+    "url": "git://github.com/ianwremmel/browser-ruler.git"
   },
   "scripts": {
     "precommit": "npm run lint:staged",
