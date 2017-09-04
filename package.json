@@ -15,10 +15,12 @@
     "url": "git://github.com/ianwremmel/browser-ruler.git"
   },
   "scripts": {
+    "prearchive": "rimraf ./artifacts",
+    "archive": "web-ext build --source-dir ./dist --artifacts-dir ./artifacts --overwrite-dest",
     "precommit": "npm run lint:staged",
     "prebuild": "rimraf ./dist/*",
     "build": "webpack --config webpack.config.babel.js",
-    "build:prod": "cross-env NODE_ENV=production npm run build",
+    "build:prod": "cross-env NODE_ENV=production npm run build && npm run archive",
     "postbuild:prod": "npm run lint:dist",
     "lint:eslint": "eslint --ignore-path .gitignore",
     "lint:dist": "web-ext lint --source-dir dist",
