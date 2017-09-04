@@ -18,15 +18,15 @@
     "precommit": "npm run lint:staged",
     "prebuild": "rimraf ./dist/*",
     "build": "webpack --config webpack.config.babel.js",
-    "postbuild": "npm run lint:dist",
     "build:prod": "cross-env NODE_ENV=production npm run build",
+    "postbuild:prod": "npm run lint:dist",
     "lint:eslint": "eslint --ignore-path .gitignore",
     "lint:dist": "web-ext lint --source-dir dist",
     "lint:js": "npm run lint:eslint -- .",
     "lint:css": "stylelint ./src/**/*.css",
     "lint:staged": "lint-staged",
     "lint": "npm run lint:js && npm run lint:js",
-    "test": "npm run lint && npm run build"
+    "test": "npm run lint && npm run build:prod"
   },
   "dependencies": {},
   "devDependencies": {
