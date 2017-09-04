@@ -22,3 +22,4 @@ jobs:
           command: NODE_ENV=production npm run archive
       - store_artifacts:
           path: ./artifacts
+          destination: ruler.zip
