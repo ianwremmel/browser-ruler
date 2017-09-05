@@ -37,6 +37,13 @@ Icons built by [The Working Group](http://blog.twg.ca) and discovered at [Icon F
 
 ## Changelog
 
+0.3.0 - 2017-04-02 - Maintenance release
+
+  - Remove grunt from toolchain
+  - Add webpack, babel-minify to toolchain
+  - Use `web-ext` for bundling
+  - Publish to Firefox store
+
 0.2.0 - 2015-01-31 - Maintenance release
 
   - Remove bower, zepto
