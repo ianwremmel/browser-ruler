@@ -57,6 +57,10 @@ Icons built by [The Working Group](http://blog.twg.ca) and discovered at [Icon F
 
 I'd love to hear about bug fixes or other ways to improve this. PRs are very welcome, but if you've got a feature in mind, please consider opening an issue before writing much code. I won't rule out adding new features, but the excess features in another ruler are why this project exists. 
 
+<a target='_blank' rel='nofollow' href='https://app.codesponsor.io/link/L4ctcTDi8zhNq7oYyUKGmUci/ianwremmel/browser-ruler'>
+  <img alt='Sponsor' width='888' height='68' src='https://app.codesponsor.io/embed/L4ctcTDi8zhNq7oYyUKGmUci/ianwremmel/browser-ruler.svg' />
+</a>
+
 ## License
 
 [MIT](LICENSE) &copy; Ian W. Remmel
