@@ -57,5 +57,6 @@
   },
   "lint-staged": {
     "*.js": "lint:eslint"
-  }
+  },
+  "private": true
 }
