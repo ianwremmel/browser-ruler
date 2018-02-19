@@ -50,7 +50,7 @@
     "lint-staged": "^6.0.0",
     "rimraf": "^2.6.1",
     "style-loader": "^0.20.2",
-    "stylelint": "^8.0.0",
+    "stylelint": "^9.0.0",
     "stylelint-config-standard": "^18.0.0",
     "web-ext": "^2.2.2",
     "webpack": "^3.5.5"
