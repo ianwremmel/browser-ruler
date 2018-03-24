@@ -44,7 +44,7 @@
     "css-loader": "^0.28.7",
     "eslint": "^4.6.0",
     "eslint-plugin-import": "^2.7.0",
-    "eslint-plugin-mocha": "^4.11.0",
+    "eslint-plugin-mocha": "^5.0.0",
     "extract-text-webpack-plugin": "^3.0.0",
     "husky": "^0.14.3",
     "lint-staged": "^7.0.0",
