@@ -53,7 +53,7 @@
     "stylelint": "^9.0.0",
     "stylelint-config-standard": "^18.0.0",
     "web-ext": "^2.2.2",
-    "webpack": "^3.5.5"
+    "webpack": "^4.5.0"
   },
   "lint-staged": {
     "*.js": "lint:eslint"
