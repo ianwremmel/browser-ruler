@@ -56,7 +56,7 @@
     "webpack": "^3.5.5"
   },
   "lint-staged": {
-    "*.js": "lint:eslint"
+    "*.js": "npm run lint:eslint"
   },
   "private": true
 }
