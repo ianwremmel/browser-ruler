@@ -58,8 +58,8 @@ export default class Ruler {
 
     this.el.style.width = `${this.rect.width}px`;
     this.el.style.height = `${this.rect.height}px`;
-    
-    var diagonal = Math.sqrt(Math.pow(this.rect.width, 2) + Math.pow(this.rect.height, 2));
+
+    const diagonal = Math.sqrt(Math.pow(this.rect.width, 2) + Math.pow(this.rect.height, 2));
     this.label.innerHTML = `W:${this.rect.width}, H:${this.rect.height}  D:${diagonal.toFixed(1)}`;
 
     console.debug(this.rect.top, this.rect.right, this.rect.bottom, this.rect.left);
