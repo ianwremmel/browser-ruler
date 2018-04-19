@@ -1,7 +1,7 @@
 # Browser Ruler
 
 [![CircleCI](https://circleci.com/gh/ianwremmel/browser-ruler.svg?style=svg)](https://circleci.com/gh/ianwremmel/browser-ruler)[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bhttps%3A%2F%2Fgithub.com%2Fianwremmel%2Fbrowser-ruler.svg?type=shield)](https://app.fossa.io/projects/git%2Bhttps%3A%2F%2Fgithub.com%2Fianwremmel%2Fbrowser-ruler?ref=badge_shield)
-[![Greenkeeper badge](https://badges.greenkeeper.io/ianwremmel/browser-ruler.svg)](https://greenkeeper.io/)
+[![Dependabot badge](https://img.shields.io/badge/Dependabot-active-brightgreen.svg)](https://dependabot.com/)
 [![standard-readme compliant](https://img.shields.io/badge/readme%20style-standard-brightgreen.svg?style=flat-square)](https://github.com/RichardLitt/standard-readme)
 
 <a href='https://ko-fi.com/L4L79EBV' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://az743702.vo.msecnd.net/cdn/kofi2.png?v=0' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a>
