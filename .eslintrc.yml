@@ -8,5 +8,6 @@ globals:
   $: false
   chrome: false
 rules:
-  no-console:
-    - off
+  no-console: off
+  import/no-commonjs: off
+  import/unambiguous: off

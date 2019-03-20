@@ -1,6 +1,6 @@
-{
+module.exports = {
   "presets": [
-    ["env", {
+    ["@babel/env", {
       "modules": false,
       "targets": {
         "browsers": [
@@ -10,11 +10,4 @@
       }
     }]
   ],
-  "env": {
-    "production": {
-      "presets": [
-        "minify"
-      ]
-    }
-  }
 }
