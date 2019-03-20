@@ -19,13 +19,12 @@
     "archive": "web-ext build --source-dir ./dist --artifacts-dir ./artifacts --overwrite-dest",
     "prebuild": "rimraf ./dist/*",
     "build": "webpack --config webpack.config.js",
-    "build:prod": "cross-env NODE_ENV=production npm run build && npm run archive",
-    "postbuild:prod": "web-ext lint --source-dir dist",
     "eslint": "eslint --ignore-path .gitignore",
     "lint:js": "npm run eslint -- .",
     "lint:css": "stylelint ./src/**/*.css",
     "lint": "npm-run-all lint:*",
-    "test": "npm-run-all lint:* build:prod"
+    "test": "npm-run-all lint:* build:prod",
+    "validate": "web-ext lint --source-dir dist"
   },
   "dependencies": {},
   "devDependencies": {
