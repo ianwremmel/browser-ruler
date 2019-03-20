@@ -20,10 +20,10 @@
     "prebuild": "rimraf ./dist/*",
     "build": "webpack --config webpack.config.js",
     "eslint": "eslint --ignore-path .gitignore",
+    "lint": "npm-run-all lint:*",
     "lint:css": "stylelint ./src/**/*.css",
     "lint:js": "npm run eslint -- .",
     "lint:types": "tsc",
-    "lint": "npm-run-all lint:*",
     "test": "npm-run-all lint:* build:prod",
     "validate": "web-ext lint --source-dir dist"
   },
