@@ -1,7 +1,7 @@
 env:
   browser: true
 extends:
-- "plugin:@ianwremmel/ianwremmel/modern"
+  - 'plugin:@ianwremmel/ianwremmel/modern'
 globals:
   $: false
   chrome: false

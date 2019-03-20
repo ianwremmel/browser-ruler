@@ -9,7 +9,7 @@ save_cache: &save_cache
   when: always
 
 docker: &docker
-  - image: "node:10"
+  - image: 'node:10'
 
 commands:
   pre_commands:

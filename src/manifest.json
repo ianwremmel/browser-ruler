@@ -4,13 +4,9 @@
   "description": "__MSG_appDescription__",
   "author": "Ian Remmel",
   "default_locale": "en",
-  "permissions": [
-    "activeTab"
-  ],
+  "permissions": ["activeTab"],
   "background": {
-    "scripts": [
-      "scripts/background.js"
-    ],
+    "scripts": ["scripts/background.js"],
     "persistent": false
   },
   "icons": {
