@@ -7,7 +7,6 @@ export default class Rect {
    * Constructor
    * @param {Point} o
    * @param {Point} t
-   * @returns {Rect}
    */
   constructor(o, t) {
     let origin = o || new Point();
@@ -17,19 +16,19 @@ export default class Rect {
       bottom: {
         get() {
           return Math.max(origin.y, terminus.y);
-        }
+        },
       },
 
       height: {
         get() {
           return Math.abs(origin.y - terminus.y);
-        }
+        },
       },
 
       left: {
         get() {
           return Math.min(origin.x, terminus.x);
-        }
+        },
       },
 
       origin: {
@@ -39,13 +38,13 @@ export default class Rect {
         set(point) {
           console.debug(`set() origin`, point);
           origin = point;
-        }
+        },
       },
 
       right: {
         get() {
           return Math.max(origin.x, terminus.x);
-        }
+        },
       },
 
       terminus: {
@@ -55,20 +54,20 @@ export default class Rect {
         set(point) {
           console.debug(`set() terminus`, point);
           terminus = point;
-        }
+        },
       },
 
       top: {
         get() {
           return Math.min(origin.y, terminus.y);
-        }
+        },
       },
 
       width: {
         get() {
           return Math.abs(origin.x - terminus.x);
-        }
-      }
+        },
+      },
     });
   }
 }

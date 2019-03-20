@@ -17,7 +17,6 @@ export default class Overlay {
 
   /**
    * Constructor
-   * @returns {Overlay}
    */
   constructor() {
     this.onMousedown = this.onMousedown.bind(this);
@@ -42,7 +41,11 @@ export default class Overlay {
    * @returns {boolean}
    */
   isVisible() {
-    return this.el && this.el.style.display !== `none` && document.body.contains(this.el);
+    return (
+      this.el &&
+      this.el.style.display !== `none` &&
+      document.body.contains(this.el)
+    );
   }
 
   /**
@@ -79,10 +82,7 @@ export default class Overlay {
    */
   onMouseup(event) {
     const point = new Point(event);
-    console.debug(`onMouseup`, point);
 
-    // FIXME: leaky demeter
-    console.log(point, this.ruler.rect.origin, this.ruler.rect.terminus);
     if (!point.equals(this.ruler.rect.origin)) {
       this.el.removeEventListener(`mousemove`, this.onMousemove);
       this.ruler.setTerminus(point);

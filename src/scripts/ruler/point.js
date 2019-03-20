@@ -6,7 +6,6 @@ export default class Point {
    * Constructor
    * @param {number} x
    * @param {number} y
-   * @returns {Point}
    */
   constructor(x, y) {
     let _x = x;
@@ -25,7 +24,7 @@ export default class Point {
         set(value) {
           console.debug(`set() x`, value);
           _x = value;
-        }
+        },
       },
       y: {
         get() {
@@ -34,8 +33,8 @@ export default class Point {
         set(value) {
           console.debug(`set() y`, value);
           _y = value;
-        }
-      }
+        },
+      },
     });
   }
 

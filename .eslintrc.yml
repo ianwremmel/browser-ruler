@@ -1,13 +1,10 @@
 env:
   browser: true
-  node: true
 extends:
-- "@ianwremmel"
-- "@ianwremmel/eslint-config/import"
+- "plugin:@ianwremmel/ianwremmel/modern"
 globals:
   $: false
   chrome: false
 rules:
   no-console: off
-  import/no-commonjs: off
-  import/unambiguous: off
+  require-jsdoc: off

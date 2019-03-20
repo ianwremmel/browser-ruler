@@ -2,3 +2,5 @@
 
 import './styles/main.css';
 import './scripts/ruler';
+
+/* eslint-enable import/no-unassigned-import */

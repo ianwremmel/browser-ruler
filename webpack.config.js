@@ -1,4 +1,5 @@
 /* eslint-disable sort-keys */
+/* eslint-env node */
 
 const path = require(`path`);
 
@@ -9,7 +10,7 @@ module.exports = {
   devtool: 'inline-sourcemap',
   output: {
     filename: `scripts/[name].js`,
-    path: path.resolve(__dirname, `./dist`)
+    path: path.resolve(__dirname, `./dist`),
   },
   mode: process.env.NODE_ENV === `production` ? `production` : `development`,
   module: {
@@ -17,33 +18,35 @@ module.exports = {
       {
         test: /\.js$/,
         exclude: /(node_modules|bower_components)/,
-        use: {loader: `babel-loader`}
+        use: {loader: `babel-loader`},
       },
       {
         test: /\.css$/,
-        use: [`style-loader`, `css-loader`]
-      }
-    ]
+        use: [`style-loader`, `css-loader`],
+      },
+    ],
   },
   plugins: [
     new CopyWebpackPlugin([
       {
         context: `./src`,
-        from: `_locales/**/*`
+        from: `_locales/**/*`,
       },
       {
         context: `./src`,
-        from: `images/**/*`
+        from: `images/**/*`,
       },
       {
         context: `./src`,
-        from: `manifest.json`
+        from: `manifest.json`,
       },
       {
         context: `./src`,
         from: `scripts/background.js`,
-        to: `scripts`
-      }
-    ])
-  ]
+        to: `scripts`,
+      },
+    ]),
+  ],
 };
+
+/* eslint-enable sort-keys */

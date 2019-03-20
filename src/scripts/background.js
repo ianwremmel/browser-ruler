@@ -5,3 +5,5 @@ chrome.browserAction.onClicked.addListener(() => {
 
   chrome.tabs.executeScript({file: `scripts/bundle.js`});
 });
+
+/* eslint-enable import/unambiguous */
