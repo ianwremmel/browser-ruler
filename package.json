@@ -20,8 +20,9 @@
     "prebuild": "rimraf ./dist/*",
     "build": "webpack --config webpack.config.js",
     "eslint": "eslint --ignore-path .gitignore",
-    "lint:js": "npm run eslint -- .",
     "lint:css": "stylelint ./src/**/*.css",
+    "lint:js": "npm run eslint -- .",
+    "lint:types": "tsc",
     "lint": "npm-run-all lint:*",
     "test": "npm-run-all lint:* build:prod",
     "validate": "web-ext lint --source-dir dist"
@@ -30,7 +31,9 @@
   "devDependencies": {
     "@babel/core": "^7.4.0",
     "@babel/preset-env": "^7.4.1",
+    "@babel/preset-typescript": "^7.3.3",
     "@ianwremmel/eslint-plugin-ianwremmel": "^3.0.0",
+    "@types/chrome": "0.0.81",
     "babel-loader": "^8.0.5",
     "copy-webpack-plugin": "^5.0.1",
     "cross-env": "^5.0.5",
@@ -51,6 +54,7 @@
     "style-loader": "^0.23.0",
     "stylelint": "^9.0.0",
     "stylelint-config-standard": "^18.0.0",
+    "typescript": "^3.3.4000",
     "web-ext": "^3.0.0",
     "webpack": "^4.29.6",
     "webpack-cli": "^3.3.0"

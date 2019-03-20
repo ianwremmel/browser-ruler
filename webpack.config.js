@@ -6,18 +6,20 @@ const path = require(`path`);
 const CopyWebpackPlugin = require(`copy-webpack-plugin`);
 
 module.exports = {
-  entry: {bundle: `./src/index.js`},
+  entry: {bundle: `./src/index.ts`},
   devtool: 'inline-sourcemap',
   output: {
     filename: `scripts/[name].js`,
     path: path.resolve(__dirname, `./dist`),
   },
   mode: process.env.NODE_ENV === `production` ? `production` : `development`,
+  resolve: {
+    extensions: ['.js', '.jsx', '.ts', '.tsx'],
+  },
   module: {
     rules: [
       {
-        test: /\.js$/,
-        exclude: /(node_modules|bower_components)/,
+        test: /\.[jt]s$/,
         use: {loader: `babel-loader`},
       },
       {

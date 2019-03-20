@@ -8,3 +8,4 @@ globals:
 rules:
   no-console: off
   require-jsdoc: off
+  import/no-unresolved: off
