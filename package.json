@@ -17,7 +17,6 @@
   "scripts": {
     "prearchive": "rimraf ./artifacts",
     "archive": "web-ext build --source-dir ./dist --artifacts-dir ./artifacts --overwrite-dest",
-    "precommit": "npm run lint:staged",
     "prebuild": "rimraf ./dist/*",
     "build": "webpack --config webpack.config.babel.js",
     "build:prod": "cross-env NODE_ENV=production npm run build && npm run archive",
@@ -26,7 +25,6 @@
     "lint:dist": "web-ext lint --source-dir dist",
     "lint:js": "npm run lint:eslint -- .",
     "lint:css": "stylelint ./src/**/*.css",
-    "lint:staged": "lint-staged",
     "lint": "npm run lint:js && npm run lint:js",
     "test": "npm run lint && npm run build:prod"
   },
@@ -46,8 +44,8 @@
     "eslint-plugin-import": "^2.7.0",
     "eslint-plugin-mocha": "^5.0.0",
     "extract-text-webpack-plugin": "^3.0.0",
-    "husky": "^1.0.1",
-    "lint-staged": "^8.0.0",
+    "husky": "^1.3.1",
+    "lint-staged": "^8.1.5",
     "rimraf": "^2.6.1",
     "style-loader": "^0.23.0",
     "stylelint": "^9.0.0",
@@ -58,5 +56,10 @@
   "lint-staged": {
     "*.js": "npm run lint:eslint"
   },
-  "private": true
+  "private": true,
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  }
 }
