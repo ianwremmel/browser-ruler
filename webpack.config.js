@@ -3,14 +3,15 @@
 const path = require(`path`);
 
 const CopyWebpackPlugin = require(`copy-webpack-plugin`);
-const ExtractTextPlugin = require(`extract-text-webpack-plugin`);
 
 module.exports = {
   entry: {bundle: `./src/index.js`},
+  devtool: 'inline-sourcemap',
   output: {
     filename: `scripts/[name].js`,
     path: path.resolve(__dirname, `./dist`)
   },
+  mode: process.env.NODE_ENV === `production` ? `production` : `development`,
   module: {
     rules: [
       {
@@ -20,15 +21,11 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        use: ExtractTextPlugin.extract({
-          fallback: `style-loader`,
-          use: `css-loader`
-        })
+        use: [`style-loader`, `css-loader`]
       }
     ]
   },
   plugins: [
-    new ExtractTextPlugin(`styles/main.css`),
     new CopyWebpackPlugin([
       {
         context: `./src`,
