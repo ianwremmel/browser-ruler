@@ -15,6 +15,17 @@ overrides:
       no-unused-vars: off
       valid-jsdoc: off
 
+  - files:
+      - 'test/**/*'
+    env:
+      mocha: true
+      node: true
+    plugins:
+      - mocha
+      - wdio
+    rules:
+      mocha/no-exclusive-tests: 'error'
+
 rules:
   no-console: off
   require-jsdoc: off

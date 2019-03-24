@@ -52,6 +52,23 @@ jobs:
       - pre_commands
       - run: npm run lint
 
+  test:
+    docker:
+      - image: 'node:10'
+      - image: selenium/standalone-firefox:3.141.59-mercury
+    environment:
+      PORT: 3000
+    steps:
+      - pre_commands
+      - run:
+          background: true
+          command: npx nws -p "$PORT" -d dist:test
+      - run: npm test
+      - store_test_results:
+          path: reports
+      - store_artifacts:
+          path: reports
+
   validate:
     docker: *docker
     steps:
@@ -69,6 +86,9 @@ workflows:
       - build:
           requires:
             - install
+      - test:
+          requires:
+            - build
       - validate:
           requires:
             - build
