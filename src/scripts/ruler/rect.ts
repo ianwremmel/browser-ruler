@@ -1,6 +1,6 @@
-import Point from './point';
-import {TypeNarrowingError} from '../lib/type-narrowing-error';
 import {get} from '../lib/get';
+
+import Point from './point';
 
 const origins: WeakMap<Rect, Point> = new WeakMap();
 const termini: WeakMap<Rect, Point> = new WeakMap();

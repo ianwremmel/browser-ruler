@@ -5,6 +5,16 @@ extends:
 globals:
   $: false
   chrome: false
+overrides:
+  - files:
+      - '**/*.ts'
+    parser: '@typescript-eslint/parser'
+    parserOptions:
+      project: './tsconfig.json'
+    rules:
+      no-unused-vars: off
+      valid-jsdoc: off
+
 rules:
   no-console: off
   require-jsdoc: off

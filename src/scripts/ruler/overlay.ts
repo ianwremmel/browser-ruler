@@ -1,8 +1,8 @@
 import pc from '../lib/prevent-collision';
+import {get} from '../lib/get';
 
 import Point from './point';
 import Ruler from './ruler';
-import {get} from '../lib/get';
 
 const elements: WeakMap<Overlay, HTMLElement> = new WeakMap();
 const rulers: WeakMap<Overlay, Ruler> = new WeakMap();
