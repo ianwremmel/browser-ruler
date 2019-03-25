@@ -47,7 +47,7 @@
     "@wdio/mocha-framework": "^5.7.3",
     "@wdio/selenium-standalone-service": "^5.7.2",
     "@wdio/spec-reporter": "^5.7.2",
-    "@wdio/sync": "^5.7.3",
+    "@wdio/sync": "^5.7.6",
     "babel-loader": "^8.0.5",
     "copy-webpack-plugin": "^5.0.1",
     "cross-env": "^5.0.5",
