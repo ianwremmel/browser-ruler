@@ -1,12 +1,32 @@
 env:
   browser: true
-  node: true
 extends:
-- "@ianwremmel"
-- "@ianwremmel/eslint-config/import"
+  - 'plugin:@ianwremmel/ianwremmel/modern'
 globals:
   $: false
   chrome: false
+overrides:
+  - files:
+      - '**/*.ts'
+    parser: '@typescript-eslint/parser'
+    parserOptions:
+      project: './tsconfig.json'
+    rules:
+      no-unused-vars: off
+      valid-jsdoc: off
+
+  - files:
+      - 'test/**/*'
+    env:
+      mocha: true
+      node: true
+    plugins:
+      - mocha
+      - wdio
+    rules:
+      mocha/no-exclusive-tests: 'error'
+
 rules:
-  no-console:
-    - off
+  no-console: off
+  require-jsdoc: off
+  import/no-unresolved: off

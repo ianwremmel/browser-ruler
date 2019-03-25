@@ -1,0 +1,94 @@
+restore_cache: &restore_cache
+  keys:
+    - node-modules-{{ arch }}-{{ checksum "package-lock.json" }}
+
+save_cache: &save_cache
+  key: node-modules-{{ arch }}-{{ checksum "package-lock.json" }}
+  paths:
+    - node_modules
+  when: always
+
+docker: &docker
+  - image: 'node:10'
+
+commands:
+  pre_commands:
+    steps:
+      - checkout
+      - attach_workspace:
+          at: '.'
+
+version: 2.1
+jobs:
+  build:
+    docker: *docker
+    steps:
+      - pre_commands
+      - run: npm run build
+      - run: npm run archive
+      - persist_to_workspace:
+          root: .
+          paths:
+            - ./dist
+            - ./artifacts
+      - store_artifacts:
+          path: ./artifacts
+
+  install:
+    docker: *docker
+    steps:
+      - checkout
+      - restore_cache: *restore_cache
+      - run: npm ci
+      - save_cache: *save_cache
+      - persist_to_workspace:
+          root: .
+          paths:
+            - node_modules
+
+  lint:
+    docker: *docker
+    steps:
+      - pre_commands
+      - run: npm run lint
+
+  test:
+    docker:
+      - image: 'node:10'
+      - image: selenium/standalone-firefox:3.141.59-mercury
+    environment:
+      PORT: 3000
+    steps:
+      - pre_commands
+      - run:
+          background: true
+          command: npx nws -p "$PORT" -d dist:test
+      - run: npm test
+      - store_test_results:
+          path: reports
+      - store_artifacts:
+          path: reports
+
+  validate:
+    docker: *docker
+    steps:
+      - pre_commands
+      - run: npm run validate
+
+workflows:
+  version: 2
+  build:
+    jobs:
+      - install
+      - lint:
+          requires:
+            - install
+      - build:
+          requires:
+            - install
+      - test:
+          requires:
+            - build
+      - validate:
+          requires:
+            - build

@@ -1,12 +1,32 @@
 import pc from '../lib/prevent-collision';
+import {get} from '../lib/get';
 
 import Point from './point';
 import Ruler from './ruler';
+
+const elements: WeakMap<Overlay, HTMLElement> = new WeakMap();
+const rulers: WeakMap<Overlay, Ruler> = new WeakMap();
 
 /**
  * Background layer that listens for mouse events to draw the Ruler
  */
 export default class Overlay {
+  get el(): HTMLElement {
+    return get(elements, this);
+  }
+
+  set el(value: HTMLElement) {
+    elements.set(this, value);
+  }
+
+  get ruler(): Ruler {
+    return get(rulers, this);
+  }
+
+  set ruler(value: Ruler) {
+    rulers.set(this, value);
+  }
+
   /**
    * Adds the overlay to the DOM
    * @returns {undefined}
@@ -17,15 +37,16 @@ export default class Overlay {
 
   /**
    * Constructor
-   * @returns {Overlay}
    */
   constructor() {
     this.onMousedown = this.onMousedown.bind(this);
     this.onMousemove = this.onMousemove.bind(this);
     this.onMouseup = this.onMouseup.bind(this);
 
-    this.el = document.getElementById(pc(`ruler-overlay`));
-    if (!this.el) {
+    const el = document.getElementById(pc(`ruler-overlay`));
+    if (el) {
+      this.el = el;
+    } else {
       this.el = document.createElement(`div`);
       this.el.id = pc(`ruler-overlay`);
       this.el.classList.add(pc(`ruler-overlay`));
@@ -42,47 +63,31 @@ export default class Overlay {
    * @returns {boolean}
    */
   isVisible() {
-    return this.el && this.el.style.display !== `none` && document.body.contains(this.el);
+    return (
+      elements.has(this) &&
+      this.el.style.display !== `none` &&
+      document.body.contains(this.el)
+    );
   }
 
-  /**
-   * Event handler.
-   * @param {MouseEvent} event
-   * @returns {undefined}
-   */
-  onMousedown(event) {
+  onMousedown(event: MouseEvent) {
     const point = new Point(event);
-    console.debug(`onMousedown`, point);
 
-    if (!this.ruler.isDrawing()) {
+    if (!this.ruler.isDrawing) {
       this.ruler.setOrigin(point);
       this.el.addEventListener(`mousemove`, this.onMousemove);
     }
   }
 
-  /**
-   * Event handler.
-   * @param {MouseEvent} event
-   * @returns {undefined}
-   */
-  onMousemove(event) {
+  onMousemove(event: MouseEvent) {
     const point = new Point(event);
-    console.debug(`onMousemove`, point);
 
     this.ruler.draw(undefined, point);
   }
 
-  /**
-   * Event handler.
-   * @param {MouseEvent} event
-   * @returns {undefined}
-   */
-  onMouseup(event) {
+  onMouseup(event: MouseEvent) {
     const point = new Point(event);
-    console.debug(`onMouseup`, point);
 
-    // FIXME: leaky demeter
-    console.log(point, this.ruler.rect.origin, this.ruler.rect.terminus);
     if (!point.equals(this.ruler.rect.origin)) {
       this.el.removeEventListener(`mousemove`, this.onMousemove);
       this.ruler.setTerminus(point);
@@ -91,10 +96,9 @@ export default class Overlay {
 
   /**
    * Removes the overlay from the DOM
-   * @returns {undefined}
    */
   remove() {
-    if (this.el) {
+    if (elements.has(this)) {
       this.el.removeEventListener(`mousedown`, this.onMousedown);
       this.el.removeEventListener(`mousemove`, this.onMousemove);
       this.el.removeEventListener(`mouseup`, this.onMouseup);
