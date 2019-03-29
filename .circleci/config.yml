@@ -25,7 +25,6 @@ jobs:
     steps:
       - pre_commands
       - run: npm run build
-      - run: npm run archive
       - persist_to_workspace:
           root: .
           paths:
@@ -52,6 +51,12 @@ jobs:
       - pre_commands
       - run: npm run lint
 
+  release:
+    docker: *docker
+    steps:
+      - pre_commands
+      - run: npx semantic-release
+
   test:
     docker:
       - image: 'node:10'
@@ -69,12 +74,6 @@ jobs:
       - store_artifacts:
           path: reports
 
-  validate:
-    docker: *docker
-    steps:
-      - pre_commands
-      - run: npm run validate
-
 workflows:
   version: 2
   build:
@@ -89,6 +88,10 @@ workflows:
       - test:
           requires:
             - build
-      - validate:
+      - release:
           requires:
-            - build
+            - test
+            - lint
+          filters:
+            branches:
+              only: master

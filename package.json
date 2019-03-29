@@ -1,6 +1,6 @@
 {
   "name": "ruler",
-  "version": "0.4.0",
+  "version": "0.0.0",
   "description": "",
   "bugs": {
     "url": "http://github.com/ianwremmel/browser-ruler/issues"
@@ -15,9 +15,7 @@
     "url": "git://github.com/ianwremmel/browser-ruler.git"
   },
   "scripts": {
-    "prearchive": "rimraf ./artifacts",
-    "archive": "web-ext build --source-dir ./dist --artifacts-dir ./artifacts --overwrite-dest",
-    "prebuild": "rimraf ./dist/*",
+    "prebuild": "rimraf ./archive/* ./dist/* ./ruler.xpi ./ruler.zip",
     "build": "webpack --config webpack.config.js",
     "eslint": "eslint --ignore-path .gitignore --ext js,ts",
     "lint": "npm-run-all lint:*",
@@ -37,6 +35,7 @@
     "@commitlint/cli": "^7.5.2",
     "@commitlint/config-conventional": "^7.5.0",
     "@ianwremmel/eslint-plugin-ianwremmel": "^3.0.0",
+    "@semantic-release/exec": "^3.3.2",
     "@types/chrome": "0.0.81",
     "@types/mocha": "^5.2.6",
     "@types/webdriverio": "^5.0.0",
@@ -49,6 +48,7 @@
     "@wdio/spec-reporter": "^5.7.2",
     "@wdio/sync": "^5.7.3",
     "babel-loader": "^8.0.5",
+    "condition-circle": "^2.0.2",
     "copy-webpack-plugin": "^5.0.1",
     "cross-env": "^5.0.5",
     "css-loader": "^2.0.0",
@@ -67,6 +67,9 @@
     "nws": "^1.1.1",
     "prettier": "^1.16.4",
     "rimraf": "^2.6.1",
+    "semantic-release": "^15.13.3",
+    "semantic-release-chrome": "^1.1.0",
+    "semantic-release-firefox": "^1.2.0",
     "style-loader": "^0.23.0",
     "stylelint": "^9.0.0",
     "stylelint-config-standard": "^18.0.0",
