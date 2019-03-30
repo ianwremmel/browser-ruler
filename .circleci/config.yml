@@ -89,6 +89,7 @@ workflows:
           requires:
             - build
       - release:
+          context: browser-ruler-semantic-release
           requires:
             - test
             - lint
