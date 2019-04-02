@@ -15,7 +15,7 @@
     "url": "git://github.com/ianwremmel/browser-ruler.git"
   },
   "scripts": {
-    "prebuild": "rimraf ./archive/* ./dist/* ./ruler.xpi ./ruler.zip",
+    "prebuild": "rimraf ./dist/*",
     "build": "webpack --config webpack.config.js",
     "eslint": "eslint --ignore-path .gitignore --ext js,ts",
     "lint": "npm-run-all lint:*",
@@ -47,6 +47,7 @@
     "@wdio/selenium-standalone-service": "^5.7.2",
     "@wdio/spec-reporter": "^5.7.2",
     "@wdio/sync": "^5.7.3",
+    "@wext/shipit": "^0.1.5",
     "babel-loader": "^8.0.5",
     "condition-circle": "^2.0.2",
     "copy-webpack-plugin": "^5.0.1",
@@ -68,8 +69,6 @@
     "prettier": "^1.16.4",
     "rimraf": "^2.6.1",
     "semantic-release": "^15.13.3",
-    "semantic-release-chrome": "^1.1.0",
-    "semantic-release-firefox": "^1.2.0",
     "style-loader": "^0.23.0",
     "stylelint": "^9.0.0",
     "stylelint-config-standard": "^18.0.0",
