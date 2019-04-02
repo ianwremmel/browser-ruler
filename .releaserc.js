@@ -11,18 +11,7 @@ module.exports = {
     [
       '@semantic-release/exec',
       {
-        publishCmd: [
-          'web-ext',
-          'sign',
-          '--source-dir',
-          'dist',
-          '--api-key',
-          process.env.WEXT_SHIPIT_FIREFOX_JWT_ISSUER,
-          '--api-secret',
-          process.env.WEXT_SHIPIT_FIREFOX_JWT_SECRET,
-          '--id',
-          process.env.WEXT_SHIPIT_FIREFOX_ID,
-        ].join(' '),
+        publishCmd: './scripts/firefox.sh',
       },
     ],
     ['@semantic-release/github'],
