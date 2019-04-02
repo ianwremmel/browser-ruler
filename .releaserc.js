@@ -20,6 +20,8 @@ module.exports = {
           process.env.WEXT_SHIPIT_FIREFOX_JWT_ISSUER,
           '--api-secret',
           process.env.WEXT_SHIPIT_FIREFOX_JWT_SECRET,
+          '--id',
+          process.env.WEXT_SHIPIT_FIREFOX_ID,
         ].join(' '),
       },
     ],
