@@ -14,6 +14,14 @@ module.exports = {
         publishCmd: './scripts/firefox.sh',
       },
     ],
-    ['@semantic-release/github'],
+    [
+      '@semantic-release/github',
+      {
+        assets: {
+          name: 'Firefox',
+          path: './web-ext-artifacts/**/*.xpi',
+        },
+      },
+    ],
   ],
 };
