@@ -41,6 +41,11 @@ module.exports = {
       {
         context: `./src`,
         from: `manifest.json`,
+        transform(content) {
+          const manifest = JSON.parse(content);
+          manifest.version = process.env.VERSION || '0.0.0';
+          return JSON.stringify(manifest, null, 2);
+        },
       },
       {
         context: `./src`,
