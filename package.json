@@ -46,7 +46,7 @@
     "@wdio/mocha-framework": "^5.9.3",
     "@wdio/selenium-standalone-service": "^5.8.4",
     "@wdio/spec-reporter": "^5.9.3",
-    "@wdio/sync": "^5.7.13",
+    "@wdio/sync": "^5.9.3",
     "@wext/shipit": "^0.2.0",
     "babel-loader": "^8.0.6",
     "condition-circle": "^2.0.2",
