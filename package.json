@@ -68,7 +68,7 @@
     "nws": "^1.1.1",
     "prettier": "^1.18.2",
     "rimraf": "^2.6.1",
-    "semantic-release": "^15.13.12",
+    "semantic-release": "^15.13.16",
     "style-loader": "^0.23.0",
     "stylelint": "^10.1.0",
     "stylelint-config-standard": "^18.3.0",
