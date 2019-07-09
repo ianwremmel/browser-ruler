@@ -29,7 +29,7 @@
   "dependencies": {},
   "devDependencies": {
     "@babel/core": "^7.5.0",
-    "@babel/preset-env": "^7.5.2",
+    "@babel/preset-env": "^7.5.3",
     "@babel/preset-typescript": "^7.3.3",
     "@babel/register": "^7.4.4",
     "@commitlint/cli": "^8.0.0",
