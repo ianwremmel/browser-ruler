@@ -71,7 +71,7 @@
     "semantic-release": "^15.13.24",
     "style-loader": "^1.0.0",
     "stylelint": "^10.1.0",
-    "stylelint-config-standard": "^18.3.0",
+    "stylelint-config-standard": "^19.0.0",
     "typescript": "^3.4.5",
     "web-ext": "^3.1.1",
     "webpack": "^4.40.2",
