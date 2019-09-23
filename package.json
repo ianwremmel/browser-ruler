@@ -31,7 +31,7 @@
     "@babel/core": "^7.6.0",
     "@babel/preset-env": "^7.6.0",
     "@babel/preset-typescript": "^7.6.0",
-    "@babel/register": "^7.6.0",
+    "@babel/register": "^7.6.2",
     "@commitlint/cli": "^8.2.0",
     "@commitlint/config-conventional": "^8.2.0",
     "@ianwremmel/eslint-plugin-ianwremmel": "^3.0.0",
