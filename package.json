@@ -35,7 +35,7 @@
     "@commitlint/cli": "^8.2.0",
     "@commitlint/config-conventional": "^8.2.0",
     "@ianwremmel/eslint-plugin-ianwremmel": "^3.0.0",
-    "@semantic-release/exec": "^3.3.6",
+    "@semantic-release/exec": "^3.3.7",
     "@types/chrome": "0.0.89",
     "@types/mocha": "^5.2.7",
     "@types/webdriverio": "^5.0.0",
