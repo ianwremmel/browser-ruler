@@ -28,7 +28,7 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "@babel/core": "^7.7.5",
+    "@babel/core": "^7.7.7",
     "@babel/preset-env": "^7.7.6",
     "@babel/preset-typescript": "^7.7.7",
     "@babel/register": "^7.7.7",
