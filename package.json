@@ -74,7 +74,7 @@
     "typescript": "^3.7.3",
     "web-ext": "^3.2.1",
     "webdriver": "^5.17.0",
-    "webpack": "^4.41.3",
+    "webpack": "^4.41.4",
     "webpack-cli": "^3.3.10",
     "webpack-dev-server": "^3.10.0"
   },
