@@ -73,7 +73,7 @@
     "stylelint-config-standard": "^19.0.0",
     "typescript": "^3.7.4",
     "web-ext": "^4.0.0",
-    "webdriver": "^5.18.0",
+    "webdriver": "^5.18.2",
     "webpack": "^4.41.5",
     "webpack-cli": "^3.3.10",
     "webpack-dev-server": "^3.10.1"
