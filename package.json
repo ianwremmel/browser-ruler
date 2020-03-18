@@ -48,7 +48,6 @@
     "@wdio/sync": "^5.20.1",
     "@wext/shipit": "^0.2.1",
     "babel-loader": "^8.0.6",
-    "condition-circle": "^2.0.2",
     "copy-webpack-plugin": "^5.1.1",
     "cross-env": "^7.0.2",
     "css-loader": "^3.4.2",
