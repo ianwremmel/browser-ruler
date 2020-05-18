@@ -68,7 +68,7 @@
     "rimraf": "^3.0.2",
     "semantic-release": "^17.0.7",
     "style-loader": "^1.2.1",
-    "stylelint": "^13.4.0",
+    "stylelint": "^13.4.1",
     "stylelint-config-standard": "^20.0.0",
     "typescript": "^3.9.2",
     "web-ext": "^4.2.0",
