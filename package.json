@@ -48,7 +48,7 @@
     "@wdio/sync": "^6.1.7",
     "@wext/shipit": "^0.2.1",
     "babel-loader": "^8.1.0",
-    "copy-webpack-plugin": "^5.1.1",
+    "copy-webpack-plugin": "^6.2.1",
     "cross-env": "^7.0.2",
     "css-loader": "^5.0.0",
     "eslint": "^5.16.0",
