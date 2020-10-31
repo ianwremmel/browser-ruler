@@ -45,7 +45,7 @@
     "@wdio/mocha-framework": "^6.0.1",
     "@wdio/selenium-standalone-service": "^6.0.1",
     "@wdio/spec-reporter": "^6.0.1",
-    "@wdio/sync": "^6.1.7",
+    "@wdio/sync": "^6.7.1",
     "@wext/shipit": "^0.2.1",
     "babel-loader": "^8.1.0",
     "copy-webpack-plugin": "^5.1.1",
