@@ -37,7 +37,7 @@
     "@ianwremmel/eslint-plugin-ianwremmel": "^3.0.0",
     "@semantic-release/exec": "^5.0.0",
     "@types/chrome": "0.0.96",
-    "@types/mocha": "^8.0.3",
+    "@types/mocha": "^8.0.4",
     "@typescript-eslint/parser": "^3.10.1",
     "@wdio/cli": "^5.23.0",
     "@wdio/junit-reporter": "^6.0.1",
